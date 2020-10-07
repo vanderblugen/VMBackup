@@ -15,6 +15,3 @@ New-EventLog -LogName Application -Source $Application
 Remove-VMSnapshot (Get-VMSnapshot -VMName $HyperVName | Where-Object {$_.CreationTime -lt (Get-Date).AddDays(-$NumberOfDaysOld)})
 Checkpoint-VM -Name $HyperVName -SnapshotName "$HyperVName - $(Get-Date -Format "yyyyMMdd hhmm")"
 Write-EventLog -LogName "Application" -Source $Application -EventID 3001 -EntryType Information -Message $Message
-
-
-# I am not claiming to create this entirely by myself.  A portion of this was obtained from [here](https://www.logitblog.com/automated-hyper-v-vm-snapshots-with-powershell)
