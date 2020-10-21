@@ -5,7 +5,7 @@
 # It also writes to the EventViewer
 
 $NumberOfDaysOld = 14
-$HyperVName = "Chaos"
+$HyperVName = "HyperVName"
 $Application = "12 Hour $HyperVName HyperV Snapshot"
 $Message = "Removed snapshots of $HyperVName older than $NumberOfDaysOld and Created a New Snapshot"
 
