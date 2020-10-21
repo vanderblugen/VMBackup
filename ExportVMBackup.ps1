@@ -3,8 +3,8 @@
 # It also writes to the EventViewer
 
 $NumberOfBackupsToKeep = 8
-$VMName = "Chaos"
-$FolderName = "E:\Exported Virtual Machines"
+$VMName = "HyperVName"
+$FolderName = "C:\ExportedLocation"
 
 New-EventLog –LogName Application –Source “Weekly $VMName HyperV Backup“
 # After running one time, this line may produce an error, this is normal
